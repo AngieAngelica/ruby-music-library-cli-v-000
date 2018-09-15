@@ -75,7 +75,7 @@ attr_reader :artist, :genre
 
   def self.create_from_filename(filename)
     new_from_filename(filename)
-    save
+    song.save
   end
 
 end
