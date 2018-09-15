@@ -14,7 +14,7 @@ class MusicImporter
   end
 
   def import
-    filecollection.each {|song| Song.new_by_filename(song)}    #We're creating new instances of the Song class
+    filecollection.each {|song| Song.create_by_filename(song)}    #We're creating new instances of the Song class
       # files.each {|song| Song.new_by_filename(song)}
   end
 
