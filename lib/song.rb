@@ -63,13 +63,13 @@ attr_reader :artist, :genre
   end
 
   def self.new_from_filename(filename)
-    artist, song, genre = filename.chomp(".mp3").split(" - ")
+    artist, name, genre = filename.chomp(".mp3").split(" - ")
 
     artist = Artist.find_or_create_by_name(artist)
-    song = Song.new(name,artist,genre)
+    name = Artist.find_or_create_by_name(artist)
     genre = Genre.find_or_create_by_name(genre)
 
-    return song.name
+    return song
 
   end
 
