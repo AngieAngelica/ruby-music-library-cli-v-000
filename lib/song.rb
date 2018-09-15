@@ -69,6 +69,7 @@ attr_reader :artist, :genre
     genre = Genre.find_or_create_by_name(genre)
 
     self.new(song, artist, genre)
+    save
 
   end
 
