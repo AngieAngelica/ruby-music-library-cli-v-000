@@ -74,6 +74,8 @@ attr_reader :artist, :genre
   end
 
   def self.create_from_filename(filename)
+    new_from_filename(filename)
+    save
   end
 
 end
