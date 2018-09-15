@@ -68,7 +68,7 @@ attr_reader :artist, :genre
     artist = Artist.find_or_create_by_name(artist)
     genre = Genre.find_or_create_by_name(genre)
 
-    self.new(song, artist, genre)
+    self.new(song, artist, genre).save
 
   end
 
